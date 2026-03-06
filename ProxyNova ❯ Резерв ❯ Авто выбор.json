@@ -48,28 +48,20 @@
         "2a02:6b8::feed:0ff",
         "2a02:6b8:0:1::feed:0ff"
       ],
-      "212.193.153.187": "212.193.153.187",
-      "51.250.75.255": "51.250.75.255",
       "5.188.140.37": "5.188.140.37",
-      "37.139.33.12": "37.139.33.12",
-      "5.42.98.94": "5.42.98.94",
-      "95.174.94.194": "95.174.94.194",
-      "tun.proxy1.raketa-balance.com": [
-        "87.239.107.16",
-        "95.174.95.171",
-        "176.108.255.112",
-        "95.174.95.111",
-        "5.42.98.94",
-        "95.174.94.194",
-        "85.208.87.189",
-        "176.109.106.6"
-      ],
+      "51.250.75.255": "51.250.75.255",
       "212.193.157.118": "212.193.157.118",
       "109.120.188.112": "109.120.188.112",
-      "45.15.128.75": "45.15.128.75",
-      "146.185.240.38": "146.185.240.38",
+      "37.139.34.237": "37.139.34.237",
+      "146.185.241.87": "146.185.241.87",
+      "212.193.153.187": "212.193.153.187",
+      "212.233.74.12": "212.233.74.12",
+      "109.120.189.117": "109.120.189.117",
+      "37.139.33.12": "37.139.33.12",
       "62.133.61.141": "62.133.61.141",
-      "87.239.107.16": "87.239.107.16"
+      "45.15.128.75": "45.15.128.75",
+      "51.250.3.29": "51.250.3.29",
+      "146.185.240.38": "146.185.240.38"
     },
     "servers": [
       "1.1.1.1",
@@ -141,11 +133,12 @@
       "settings": {
         "vnext": [
           {
-            "address": "212.193.153.187",
+            "address": "5.188.140.37",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
+                "flow": "xtls-rprx-vision",
                 "id": "0d3e2d21-f31b-07d0-b418-54cacd0be7c4",
                 "level": 8
               }
@@ -154,8 +147,16 @@
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": true,
+          "fingerprint": "qq",
+          "publicKey": "4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik",
+          "serverName": "max.ru",
+          "shortId": "d8c6b58bcbb0c323",
+          "show": false
+        },
+        "security": "reality",
         "sockopt": {
           "domainStrategy": "UseIP",
           "happyEyeballs": {
@@ -165,21 +166,10 @@
             "tryDelayMs": 250
           }
         },
-        "tlsSettings": {
-          "allowInsecure": false,
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ],
-          "fingerprint": "chrome",
-          "serverName": "lk-cdn.deploy-assure.ru",
-          "show": false
-        },
-        "wsSettings": {
-          "headers": {
-            "Host": "lk-cdn.deploy-assure.ru"
-          },
-          "path": "//"
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
         }
       },
       "tag": "proxy-1"
@@ -242,256 +232,6 @@
       "settings": {
         "vnext": [
           {
-            "address": "5.188.140.37",
-            "port": 443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "xtls-rprx-vision",
-                "id": "0d3e2d21-f31b-07d0-b418-54cacd0be7c4",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "realitySettings": {
-          "allowInsecure": true,
-          "fingerprint": "qq",
-          "publicKey": "4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik",
-          "serverName": "max.ru",
-          "shortId": "d8c6b58bcbb0c323",
-          "show": false
-        },
-        "security": "reality",
-        "sockopt": {
-          "domainStrategy": "UseIP",
-          "happyEyeballs": {
-            "interleave": 2,
-            "maxConcurrentTry": 4,
-            "prioritizeIPv6": true,
-            "tryDelayMs": 250
-          }
-        },
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      },
-      "tag": "proxy-3"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "37.139.33.12",
-            "port": 443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "xtls-rprx-vision",
-                "id": "0d3e2d21-f31b-0bb8-b418-54cacd0be7c4",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "realitySettings": {
-          "allowInsecure": true,
-          "fingerprint": "qq",
-          "publicKey": "4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik",
-          "serverName": "max.ru",
-          "shortId": "d8c6b58bcbb0c323",
-          "show": false
-        },
-        "security": "reality",
-        "sockopt": {
-          "domainStrategy": "UseIP",
-          "happyEyeballs": {
-            "interleave": 2,
-            "maxConcurrentTry": 4,
-            "prioritizeIPv6": true,
-            "tryDelayMs": 250
-          }
-        },
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      },
-      "tag": "proxy-4"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "5.42.98.94",
-            "port": 443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "xtls-rprx-vision",
-                "id": "bf77f272-4220-4655-ab76-5ccdf0d2a60f",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "realitySettings": {
-          "allowInsecure": true,
-          "fingerprint": "chrome",
-          "publicKey": "JaP4bhvIMW-l7T0_RkLra59DeBYI6W9XemKa8MyRPSY",
-          "serverName": "eh.vk.com",
-          "shortId": "6c6082a2223c1d03",
-          "show": false
-        },
-        "security": "reality",
-        "sockopt": {
-          "domainStrategy": "UseIP",
-          "happyEyeballs": {
-            "interleave": 2,
-            "maxConcurrentTry": 4,
-            "prioritizeIPv6": true,
-            "tryDelayMs": 250
-          }
-        },
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      },
-      "tag": "proxy-5"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "95.174.94.194",
-            "port": 443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "xtls-rprx-vision",
-                "id": "bf77f272-4220-4655-ab76-5ccdf0d2a60f",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "realitySettings": {
-          "allowInsecure": true,
-          "fingerprint": "chrome",
-          "publicKey": "JaP4bhvIMW-l7T0_RkLra59DeBYI6W9XemKa8MyRPSY",
-          "serverName": "eh.vk.com",
-          "shortId": "6c6082a2223c1d03",
-          "show": false
-        },
-        "security": "reality",
-        "sockopt": {
-          "domainStrategy": "UseIP",
-          "happyEyeballs": {
-            "interleave": 2,
-            "maxConcurrentTry": 4,
-            "prioritizeIPv6": true,
-            "tryDelayMs": 250
-          }
-        },
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      },
-      "tag": "proxy-6"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "tun.proxy1.raketa-balance.com",
-            "port": 443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "xtls-rprx-vision",
-                "id": "bf77f272-4220-4655-ab76-5ccdf0d2a60f",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "realitySettings": {
-          "allowInsecure": true,
-          "fingerprint": "chrome",
-          "publicKey": "JaP4bhvIMW-l7T0_RkLra59DeBYI6W9XemKa8MyRPSY",
-          "serverName": "eh.vk.com",
-          "shortId": "6c6082a2223c1d03",
-          "show": false
-        },
-        "security": "reality",
-        "sockopt": {
-          "domainStrategy": "UseIP",
-          "happyEyeballs": {
-            "interleave": 2,
-            "maxConcurrentTry": 4,
-            "prioritizeIPv6": true,
-            "tryDelayMs": 250
-          }
-        },
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      },
-      "tag": "proxy-7"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
             "address": "212.193.157.118",
             "port": 443,
             "users": [
@@ -533,57 +273,7 @@
           "path": "//"
         }
       },
-      "tag": "proxy-8"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "tun.proxy1.raketa-balance.com",
-            "port": 443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "xtls-rprx-vision",
-                "id": "bf77f272-4220-4655-ab76-5ccdf0d2a60f",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "realitySettings": {
-          "allowInsecure": true,
-          "fingerprint": "chrome",
-          "publicKey": "JaP4bhvIMW-l7T0_RkLra59DeBYI6W9XemKa8MyRPSY",
-          "serverName": "eh.vk.com",
-          "shortId": "6c6082a2223c1d03",
-          "show": false
-        },
-        "security": "reality",
-        "sockopt": {
-          "domainStrategy": "UseIP",
-          "happyEyeballs": {
-            "interleave": 2,
-            "maxConcurrentTry": 4,
-            "prioritizeIPv6": true,
-            "tryDelayMs": 250
-          }
-        },
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      },
-      "tag": "proxy-9"
+      "tag": "proxy-3"
     },
     {
       "mux": {
@@ -633,7 +323,409 @@
           }
         }
       },
+      "tag": "proxy-4"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "37.139.34.237",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "id": "f518f8b4-d7e1-473b-8dba-c002b995afa8",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": true,
+          "fingerprint": "chrome",
+          "publicKey": "sMMDn89-fJAD7VgeTJbdQTmyyUoyRucoMLMvVMm8hAM",
+          "serverName": "eh.vk.com",
+          "shortId": "cfdbaa7f996dd0e9",
+          "show": false
+        },
+        "security": "reality",
+        "sockopt": {
+          "domainStrategy": "UseIP",
+          "happyEyeballs": {
+            "interleave": 2,
+            "maxConcurrentTry": 4,
+            "prioritizeIPv6": true,
+            "tryDelayMs": 250
+          }
+        },
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-5"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "146.185.241.87",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "id": "f518f8b4-d7e1-473b-8dba-c002b995afa8",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": true,
+          "fingerprint": "chrome",
+          "publicKey": "sMMDn89-fJAD7VgeTJbdQTmyyUoyRucoMLMvVMm8hAM",
+          "serverName": "ads.x5.ru",
+          "shortId": "cfdbaa7f996dd0e9",
+          "show": false
+        },
+        "security": "reality",
+        "sockopt": {
+          "domainStrategy": "UseIP",
+          "happyEyeballs": {
+            "interleave": 2,
+            "maxConcurrentTry": 4,
+            "prioritizeIPv6": true,
+            "tryDelayMs": 250
+          }
+        },
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-6"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "212.193.153.187",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "0d3e2d21-f31b-07d0-b418-54cacd0be7c4",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIP",
+          "happyEyeballs": {
+            "interleave": 2,
+            "maxConcurrentTry": 4,
+            "prioritizeIPv6": true,
+            "tryDelayMs": 250
+          }
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "lk-cdn.deploy-assure.ru",
+          "show": false
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "lk-cdn.deploy-assure.ru"
+          },
+          "path": "//"
+        }
+      },
+      "tag": "proxy-7"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "212.233.74.12",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "id": "f518f8b4-d7e1-473b-8dba-c002b995afa8",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": true,
+          "fingerprint": "chrome",
+          "publicKey": "BkQP5K_b-8lshJciihVQa4SbEWu-g51DzlVGndzwc2w",
+          "serverName": "ads.x5.ru",
+          "shortId": "4e752b0d4d15e0f9",
+          "show": false
+        },
+        "security": "reality",
+        "sockopt": {
+          "domainStrategy": "UseIP",
+          "happyEyeballs": {
+            "interleave": 2,
+            "maxConcurrentTry": 4,
+            "prioritizeIPv6": true,
+            "tryDelayMs": 250
+          }
+        },
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-8"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "109.120.189.117",
+            "port": 52006,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "id": "a5ca6aa5-0354-2710-b094-741b1dfe4daa",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": true,
+          "fingerprint": "qq",
+          "publicKey": "4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik",
+          "serverName": "max.ru",
+          "shortId": "d8c6b58bcbb0c323",
+          "show": false
+        },
+        "security": "reality",
+        "sockopt": {
+          "domainStrategy": "UseIP",
+          "happyEyeballs": {
+            "interleave": 2,
+            "maxConcurrentTry": 4,
+            "prioritizeIPv6": true,
+            "tryDelayMs": 250
+          }
+        },
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-9"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "37.139.33.12",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "id": "0d3e2d21-f31b-0bb8-b418-54cacd0be7c4",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": true,
+          "fingerprint": "qq",
+          "publicKey": "4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik",
+          "serverName": "max.ru",
+          "shortId": "d8c6b58bcbb0c323",
+          "show": false
+        },
+        "security": "reality",
+        "sockopt": {
+          "domainStrategy": "UseIP",
+          "happyEyeballs": {
+            "interleave": 2,
+            "maxConcurrentTry": 4,
+            "prioritizeIPv6": true,
+            "tryDelayMs": 250
+          }
+        },
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
       "tag": "proxy-10"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "62.133.61.141",
+            "port": 8443,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "id": "43588bac-2301-461e-8947-6b73ffbd39bf",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": true,
+          "fingerprint": "qq",
+          "publicKey": "P-3bYKbPp5YeCefayC3S3PvLanBv_lp0p_5qfrjbM34",
+          "serverName": "st.okcdn.ru",
+          "shortId": "39a1eb3ec417cd66",
+          "show": false
+        },
+        "security": "reality",
+        "sockopt": {
+          "domainStrategy": "UseIP",
+          "happyEyeballs": {
+            "interleave": 2,
+            "maxConcurrentTry": 4,
+            "prioritizeIPv6": true,
+            "tryDelayMs": 250
+          }
+        },
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-11"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "62.133.61.141",
+            "port": 8443,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "id": "43588bac-2301-461e-8947-6b73ffbd39bf",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": true,
+          "fingerprint": "qq",
+          "publicKey": "P-3bYKbPp5YeCefayC3S3PvLanBv_lp0p_5qfrjbM34",
+          "serverName": "st.okcdn.ru",
+          "shortId": "39a1eb3ec417cd66",
+          "show": false
+        },
+        "security": "reality",
+        "sockopt": {
+          "domainStrategy": "UseIP",
+          "happyEyeballs": {
+            "interleave": 2,
+            "maxConcurrentTry": 4,
+            "prioritizeIPv6": true,
+            "tryDelayMs": 250
+          }
+        },
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-12"
     },
     {
       "mux": {
@@ -684,7 +776,57 @@
           }
         }
       },
-      "tag": "proxy-11"
+      "tag": "proxy-13"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "51.250.3.29",
+            "port": 7445,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "id": "ebcd67f1-4eb0-4ae6-a27c-f15a532553f8",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "realitySettings": {
+          "allowInsecure": true,
+          "fingerprint": "qq",
+          "publicKey": "1nX2U0-rg8Lw6Bz0i16x1YItJUs8X9CsvzQjCk-DOhA",
+          "serverName": "ads.x5.ru",
+          "show": false,
+          "spiderX": "/"
+        },
+        "security": "reality",
+        "sockopt": {
+          "domainStrategy": "UseIP",
+          "happyEyeballs": {
+            "interleave": 2,
+            "maxConcurrentTry": 4,
+            "prioritizeIPv6": true,
+            "tryDelayMs": 250
+          }
+        },
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "proxy-14"
     },
     {
       "mux": {
@@ -716,156 +858,6 @@
           "publicKey": "4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik",
           "serverName": "max.ru",
           "shortId": "d8c6b58bcbb0c323",
-          "show": false
-        },
-        "security": "reality",
-        "sockopt": {
-          "domainStrategy": "UseIP",
-          "happyEyeballs": {
-            "interleave": 2,
-            "maxConcurrentTry": 4,
-            "prioritizeIPv6": true,
-            "tryDelayMs": 250
-          }
-        },
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      },
-      "tag": "proxy-12"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "62.133.61.141",
-            "port": 8443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "xtls-rprx-vision",
-                "id": "43588bac-2301-461e-8947-6b73ffbd39bf",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "realitySettings": {
-          "allowInsecure": true,
-          "fingerprint": "qq",
-          "publicKey": "P-3bYKbPp5YeCefayC3S3PvLanBv_lp0p_5qfrjbM34",
-          "serverName": "st.okcdn.ru",
-          "shortId": "39a1eb3ec417cd66",
-          "show": false
-        },
-        "security": "reality",
-        "sockopt": {
-          "domainStrategy": "UseIP",
-          "happyEyeballs": {
-            "interleave": 2,
-            "maxConcurrentTry": 4,
-            "prioritizeIPv6": true,
-            "tryDelayMs": 250
-          }
-        },
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      },
-      "tag": "proxy-13"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "62.133.61.141",
-            "port": 8443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "xtls-rprx-vision",
-                "id": "43588bac-2301-461e-8947-6b73ffbd39bf",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "realitySettings": {
-          "allowInsecure": true,
-          "fingerprint": "qq",
-          "publicKey": "P-3bYKbPp5YeCefayC3S3PvLanBv_lp0p_5qfrjbM34",
-          "serverName": "st.okcdn.ru",
-          "shortId": "39a1eb3ec417cd66",
-          "show": false
-        },
-        "security": "reality",
-        "sockopt": {
-          "domainStrategy": "UseIP",
-          "happyEyeballs": {
-            "interleave": 2,
-            "maxConcurrentTry": 4,
-            "prioritizeIPv6": true,
-            "tryDelayMs": 250
-          }
-        },
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      },
-      "tag": "proxy-14"
-    },
-    {
-      "mux": {
-        "concurrency": -1,
-        "enabled": false
-      },
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "87.239.107.16",
-            "port": 443,
-            "users": [
-              {
-                "encryption": "none",
-                "flow": "xtls-rprx-vision",
-                "id": "bf77f272-4220-4655-ab76-5ccdf0d2a60f",
-                "level": 8
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "realitySettings": {
-          "allowInsecure": true,
-          "fingerprint": "chrome",
-          "publicKey": "JaP4bhvIMW-l7T0_RkLra59DeBYI6W9XemKa8MyRPSY",
-          "serverName": "eh.vk.com",
-          "shortId": "6c6082a2223c1d03",
           "show": false
         },
         "security": "reality",
